@@ -7,8 +7,9 @@ int main()
 	cout<<text.getData();
 	cout<<endl<<"switch out content with: ";
 	string temp;
-	cin>>temp;
+	getline(cin,temp);
 	text.setData(temp);
-	cin.get();
+	cout<<temp<<endl;
+	system("pause");
 	return 0;
 }
