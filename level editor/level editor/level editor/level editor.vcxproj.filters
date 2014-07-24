@@ -27,6 +27,9 @@
     <ClCompile Include="singleton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="drawer.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

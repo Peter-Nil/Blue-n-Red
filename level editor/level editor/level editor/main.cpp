@@ -42,13 +42,14 @@ while (window.isOpen())
 			} 
 			if ((sf::Mouse::isButtonPressed(sf::Mouse::Right))&&(spawnRate<1))
 			{
-				drawer::newDraw(window_p);spawnRate=5;
+				drawer::newDraw(window_p);
+				spawnRate=5;
 				goto END;
 			}
-			if 
-			((sf::Mouse::isButtonPressed(sf::Mouse::Middle))&&(destroyRate<1))
+			if ((sf::Mouse::isButtonPressed(sf::Mouse::Middle))&&(destroyRate<1))
 			{
-				drawer::destroyDraw(window_p); destroyRate=5;
+				drawer::destroyDraw(window_p); 
+				destroyRate=5;
 			}
 			END:
 		;}
