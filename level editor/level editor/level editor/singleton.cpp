@@ -1,7 +1,7 @@
 #include "singleton.h"
 
 
-static int selectedType=1;
+static int selectedDirection=1;
 static int selectedSize=1;
 static char selectedColor='R';
 static Singleton* singleton_p=0;
@@ -15,8 +15,8 @@ Singleton::Singleton(){
 
 }
 
-const int Singleton::getType(){
-return selectedType;
+const int Singleton::getDirection(){
+return selectedDirection;
 }
 
 const int Singleton::getSize()
@@ -27,10 +27,10 @@ const char Singleton::getColor()
 {return selectedColor;
 }
 
-void Singleton::changeType()
-{if (selectedType==1)
-{selectedType=0;}
-else {selectedType++;}
+void Singleton::changeDirection()
+{if (selectedDirection==1)
+{selectedDirection=0;}
+else {selectedDirection++;}
 ;
 }
 void Singleton::changeSize(int newSize)
