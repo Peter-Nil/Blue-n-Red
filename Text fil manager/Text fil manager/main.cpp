@@ -1,6 +1,8 @@
 #include "iostream"
 #include "fil.h"
-
+#include <string>
+#include <cstring>
+struct b{int c;char d;};
 int main()
 {
 	fil text("text fil test", "txt");
