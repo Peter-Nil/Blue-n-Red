@@ -1,5 +1,6 @@
 #ifndef FIL
 #define FIL
+#include "fstream" //för filebuf
 #include "string"
 
 using namespace std;
