@@ -21,9 +21,15 @@
     <ClCompile Include="fil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="filmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filmanager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
