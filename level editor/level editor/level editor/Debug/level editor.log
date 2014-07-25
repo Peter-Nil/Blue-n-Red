@@ -1,0 +1,18 @@
+﻿Build started 2014-07-25 18:20:05.
+     1>Project "C:\UDK\Blue-n-Red\level editor\level editor\level editor\level editor.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"SFML-2.1\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt drawer.cpp
+         drawer.cpp
+     1>c:\udk\blue-n-red\level editor\level editor\level editor\drawer.cpp(21): warning C4715: 'dumbdata' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\UDK\Blue-n-Red\level editor\level editor\Debug\level editor.exe" /INCREMENTAL /NOLOGO /LIBPATH:"SFML-2.1\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\UDK\Blue-n-Red\level editor\level editor\Debug\level editor.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\UDK\Blue-n-Red\level editor\level editor\Debug\level editor.lib" /MACHINE:X86 Debug\drawer.obj
+         Debug\fil.obj
+         Debug\houses.obj
+         Debug\main.obj
+         Debug\singleton.obj
+         level editor.vcxproj -> C:\UDK\Blue-n-Red\level editor\level editor\Debug\level editor.exe
+     1>Done Building Project "C:\UDK\Blue-n-Red\level editor\level editor\level editor\level editor.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.39
