@@ -3,7 +3,9 @@
 #include <vector>
 #include "houses.h"
 #include <SFML\Graphics.hpp>
+#include "fil.h"
 using namespace std;
+static fil saveFile = fil("green","txt");
 Singleton*singleton_P=Singleton::newSingleton();
 std::vector<houses*> house_v;
 static bool clear=1;
@@ -37,13 +39,13 @@ void drawer::mainDraw(sf::RenderWindow* window)
 }
 
 int overlapX()
-{if (singleton_P->getType()==1)
+{if (singleton_P->getDirection()==1)
 {return 34;}
 else 
 {return (34*(singleton_P->getSize()));
 }}
 
-int overlapY(){if (singleton_P->getType()==0){return 34;}
+int overlapY(){if (singleton_P->getDirection()==0){return 34;}
 else {return (34*(singleton_P->getSize()));
 }}
 
@@ -171,9 +173,32 @@ void drawer::keyboard(sf::Event *event_i){
 				case sf::Keyboard::W:
 					{singleton_P->changeColor('W')	;
 					break;}
-				case sf::Keyboard::T:
-					{singleton_P->changeType();
+				case sf::Keyboard::D:
+					{singleton_P->changeDirection();
 					break;}
+				case sf::Keyboard::S:
+					{
+						string house_out="";
+						int size=house_v.size();
+						for(int i=0;i<size;i++)
+						{
+							
+							house_out+= house_v[i]->getDataAsString()+"\n";
+						}
+						saveFile.setData(house_out);
+					}
+				case sf::Keyboard::L:
+					{
+						string load = saveFile.getData();
+						vector<string> loadDataVector;
+						string temp = getline(, load);
+						//convert load to multiple strings for each new line
+						
+
+						//house_v.push_back(new houses(loadData[i]))
+					}
+					
+
 				
 				}
 			}}
