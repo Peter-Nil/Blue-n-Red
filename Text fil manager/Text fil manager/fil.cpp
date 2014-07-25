@@ -1,4 +1,5 @@
 #include "fil.h"
+#include "fstream" //för filebuf
 
 fil::fil(string NAMN, string TYP):
 	namn(NAMN),
