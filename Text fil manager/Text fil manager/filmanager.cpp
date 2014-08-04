@@ -9,3 +9,27 @@ bool filmanager::addFile(string name, string type){
 	}
 	return success;
 }
+
+//you get null pointer if it doesnt exist
+fil* filmanager::getFile(string name, string type){
+	fil* rfil = 0;
+	for(auto temp = files.begin(); temp != files.end(); temp++){
+		if(temp._Ptr->getFilename() == (name+'.'+type))		{
+			rfil = temp._Ptr;
+			break;
+		}
+	}
+	return rfil;
+}
+
+//you get null pointer if it doesnt exist
+	fil* filmanager::getFile(string name){
+	fil* rfil = 0;
+	for(auto temp = files.begin(); temp != files.end(); temp++){
+		if(temp._Ptr->getName() == (name))		{
+			rfil = temp._Ptr;
+			break;
+		}
+	}
+	return rfil;
+}
