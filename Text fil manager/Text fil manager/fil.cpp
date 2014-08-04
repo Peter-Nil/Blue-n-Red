@@ -42,3 +42,14 @@ void	fil::setData(string Data){
 		fb.close();
 	}
 };
+
+string	fil::serialization(void* pointertovariable, int sizeofvariable)
+{
+	return string((char*)(pointertovariable), sizeofvariable);
+}
+
+void*	fil::deserialization()
+{
+	ds = getData();
+	return (void*)((char*)ds.c_str());
+}
