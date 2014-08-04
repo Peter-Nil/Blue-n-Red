@@ -5,6 +5,7 @@
 #include <SFML\Graphics.hpp>
 #include "fil.h"
 #include <sstream>
+
 using namespace std;
 static fil saveFile = fil("green","txt");
 Singleton*singleton_P=Singleton::newSingleton();
@@ -183,26 +184,35 @@ void drawer::keyboard(sf::Event *event_i){
 						int size=house_v.size();
 						for(int i=0;i<size;i++)
 						{
-							
 							house_out+= house_v[i]->getDataAsString()+"\n";
 						}
 						saveFile.setData(house_out);
+						break;
 					}
 				case sf::Keyboard::L:
 					{
 						istringstream load(saveFile.getData());
 						vector<string> loadDataVector;
 						string line;
+						
 						while(getline(load,line)){
 							loadDataVector.push_back(line);
-						}
-						//convert load to multiple strings for each new line
-						
+						}//convert load to multiple strings for each new line
 
-						//house_v.push_back(new houses(loadData[i]))
+						while(house_v.empty()==false)//erase the old houses
+						{
+							delete house_v.back();
+							house_v.pop_back(); 
+						}
+						int newSize = loadDataVector.size();
+						for(int i = 0;i<newSize;i++)
+						{
+							house_v.push_back(new houses(loadDataVector[i]));
+						}//turn every line into an item
+					}
 					}
 					
 
 				
 				}
-			}}
+			}

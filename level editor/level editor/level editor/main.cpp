@@ -33,25 +33,25 @@ while (window.isOpen())
                 window.close();
 			if (event1.type == sf::Event::KeyPressed) 
 			{drawer::keyboard(&event1);
-			goto END;
+			goto ENDINPUTLOOP;
 			}
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
 				drawer::clickDraw(window_p);
-				goto END;
+				goto ENDINPUTLOOP;
 			} 
 			if ((sf::Mouse::isButtonPressed(sf::Mouse::Right))&&(spawnRate<1))
 			{
 				drawer::newDraw(window_p);
 				spawnRate=5;
-				goto END;
+				goto ENDINPUTLOOP;
 			}
 			if ((sf::Mouse::isButtonPressed(sf::Mouse::Middle))&&(destroyRate<1))
 			{
 				drawer::destroyDraw(window_p); 
 				destroyRate=5;
 			}
-			END:
+			ENDINPUTLOOP:
 		;}
 		window.clear();
 
